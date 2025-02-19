@@ -1,0 +1,34 @@
+{
+  "habits": [
+    {
+      "id": "2",
+      "title": " title 1",
+      "completedDays": 1
+    },
+    {
+      "id": "4",
+      "title": " title 2",
+      "completedDays": 1
+    },
+    {
+      "id": "5",
+      "title": "another title 3",
+      "completedDays": 1
+    },
+    {
+      "id": "6",
+      "title": "title 4",
+      "completedDays": 0
+    },
+    {
+      "id": "6f86",
+      "title": "title 12",
+      "completedDays": 0
+    },
+    {
+      "id": "9028",
+      "title": "выпить стакан воды",
+      "completedDays": 20
+    }
+  ]
+}

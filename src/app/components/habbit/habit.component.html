@@ -1,0 +1,16 @@
+<div class="container">
+  <form [formGroup]="habitForm" (ngSubmit)="addHabit()">
+    <input formControlName="name" placeholder="Enter habit name" />
+    <button type="submit" [disabled]="habitForm.invalid">Add Habit</button>
+  </form>
+  <ul>
+    <li *ngFor="let habit of habits">
+      <span>{{ habit.title }} - Completed: {{ habit.completedDays }} days</span>
+      <button (click)="completeDay(habit)">✔</button>
+      <button (click)="removeHabit(habit.id)">✖</button>
+    </li>
+  </ul>
+</div>
+
+
+
