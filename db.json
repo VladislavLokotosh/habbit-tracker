@@ -7,8 +7,8 @@
     },
     {
       "id": "4",
-      "title": " title 2",
-      "completedDays": 1
+      "title": "что-то сделать",
+      "completedDays": 2
     },
     {
       "id": "5",
@@ -27,7 +27,7 @@
     },
     {
       "id": "ee98",
-      "title": "зарядка",
+      "title": "зарядка(",
       "completedDays": 8
     }
   ]
