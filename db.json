@@ -2,8 +2,8 @@
   "habits": [
     {
       "id": "2",
-      "title": " title 1",
-      "completedDays": 1
+      "title": "привет",
+      "completedDays": 39
     },
     {
       "id": "4",
@@ -26,9 +26,9 @@
       "completedDays": 0
     },
     {
-      "id": "9028",
-      "title": "выпить стакан воды",
-      "completedDays": 20
+      "id": "ee98",
+      "title": "зарядка",
+      "completedDays": 8
     }
   ]
 }

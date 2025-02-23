@@ -1,16 +1,29 @@
 <div class="container">
+  <h1>Habit Tracker</h1>
+
+  <!-- Форма добавления привычки -->
   <form [formGroup]="habitForm" (ngSubmit)="addHabit()">
-    <input formControlName="name" placeholder="Enter habit name" />
-    <button type="submit" [disabled]="habitForm.invalid">Add Habit</button>
+    <input formControlName="name" placeholder="Введите привычку" />
+    <button type="submit" [disabled]="habitForm.invalid">Добавить</button>
   </form>
+
   <ul>
     <li *ngFor="let habit of habits">
-      <span>{{ habit.title }} - Completed: {{ habit.completedDays }} days</span>
-      <button (click)="completeDay(habit)">✔</button>
-      <button (click)="removeHabit(habit.id)">✖</button>
+      <!-- Режим редактирования -->
+      <div *ngIf="editingHabitId === habit.id" [formGroup]="editForms[habit.id!]">
+        <input formControlName="name" />
+        <button (click)="saveEdit(habit)">💾 Сохранить</button>
+        <button (click)="cancelEdit()">❌ Отмена</button>
+      </div>
+      <!-- Обычный режим -->
+      <div *ngIf="editingHabitId !== habit.id">
+        <span>{{ habit.title }} - Завершено: {{ habit.completedDays }} дней</span>
+        <button (click)="completeDay(habit)">✔</button>
+        <button (click)="startEditing(habit)">✏️</button>
+        <button (click)="removeHabit(habit.id)">✖</button>
+      </div>
     </li>
   </ul>
 </div>
-
 
 
